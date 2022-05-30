@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Maven+Pro:wght@400;500;600;700;800;900&family=Roboto:ital,wght@0,400;0,700;0,900;1,100;1,300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Maven Pro", sans-serif;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 30px repeat(4, 1fr) 30px;
+  background-color: whitesmoke;
+}
+header,
+footer {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-column: 1 / -1;
+  align-items: center;
+}
+
+main {
+  grid-column: 1 / -1;
+  grid-row: 2 / -2;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+header :first-child {
+  grid-column: 1 / 3;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.bold {
+  font-weight: 700;
+}
+h2 {
+  grid-column: 4 / -1;
+  grid-row: 2/ 3;
+  z-index: 3;
+  color: red;
+  font-size: 9rem;
+  padding: 1rem;
+  letter-spacing: 1.1rem;
+  font-weight: 400;
+}
+
+main div {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.pic1 {
+  background-image: url(./assets/item-one.jpeg);
+}
+.pic2 {
+  background-image: url(./assets/item-two.jpeg);
+}
+.pic3 {
+  grid-column-start: 7;
+  grid-row-start: 4;
+  background-image: url(./assets/item-three.jpeg);
+}
+.pic4 {
+  grid-column-start: 6;
+  grid-row-start: 3;
+
+  background-image: url(./assets/item-four.jpeg);
+}
+.pic5 {
+  grid-column-start: 5;
+  grid-row-start: 2;
+  background-image: url(./assets/item-five.jpeg);
+}
+.pic6 {
+  grid-column-start: 3;
+  grid-row-start: 2;
+  background-image: url(./assets/item-six.jpeg);
+}
+.pic7 {
+  grid-column-start: 4;
+  grid-row-start: 3;
+  background-image: url(./assets/item-seven.jpeg);
+}
+.pic8 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  background-image: url(./assets/item-eight.jpeg);
+}
+.pic9 {
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-image: url(./assets/item-nine.jpeg);
+}
+footer p:last-child {
+  grid-column-start: 6;
+  font-style: italic;
+}
